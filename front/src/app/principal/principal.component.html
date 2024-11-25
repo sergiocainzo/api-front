@@ -24,15 +24,18 @@
   />
 
   @if(btnCadastro){
-  <input type="button" value="Cadastrar" class="btn btn-success" />
+  <input
+    type="button"
+    value="Cadastrar"
+    class="btn btn-success"
+    (click)="cadastrar()"
+  />
   }@else if (!btnCadastro) {
   <input type="button" value="Alterar" class="btn btn-warning" />
   <input type="button" value="Remover" class="btn btn-danger" />
   <input type="button" value="Cancelar" class="btn btn-secondary" />
   }
 </form>
-
-<h1>{{ cliente | json }}</h1>
 
 <table class="table">
   <thead>

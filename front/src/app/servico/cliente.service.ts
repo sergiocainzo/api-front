@@ -11,7 +11,6 @@ export class ClienteService {
   // URL da API
   private url:string = 'http://localhost:8080';
 
-
   // Construtor
   constructor(private http:HttpClient) { }
 
