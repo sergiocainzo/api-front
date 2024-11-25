@@ -1,9 +1,27 @@
 <form>
   <img src="cliente.png" alt="Cliente" />
 
-  <input type="text" placeholder="Nome" class="form-control" />
-  <input type="number" placeholder="Idade" class="form-control" />
-  <input type="text" placeholder="Cidade" class="form-control" />
+  <input
+    type="text"
+    placeholder="Nome"
+    class="form-control"
+    name="nome"
+    [(ngModel)]="cliente.nome"
+  />
+  <input
+    type="number"
+    placeholder="Idade"
+    class="form-control"
+    name="idade"
+    [(ngModel)]="cliente.idade"
+  />
+  <input
+    type="text"
+    placeholder="Cidade"
+    class="form-control"
+    name="cidade"
+    [(ngModel)]="cliente.cidade"
+  />
 
   @if(btnCadastro){
   <input type="button" value="Cadastrar" class="btn btn-success" />
@@ -14,7 +32,7 @@
   }
 </form>
 
-<h1>{{ cliente | json}}</h1>
+<h1>{{ cliente | json }}</h1>
 
 <table class="table">
   <thead>
