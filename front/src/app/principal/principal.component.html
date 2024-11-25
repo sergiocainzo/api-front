@@ -5,10 +5,13 @@
   <input type="number" placeholder="Idade" class="form-control" />
   <input type="text" placeholder="Cidade" class="form-control" />
 
-  <input type="button" value="Cadastrar" class="btn btn-success"/>
-  <input type="button" value="Alterar" class="btn btn-warning"/>
-  <input type="button" value="Remover" class="btn btn-danger"/>
-  <input type="button" value="Cancelar" class="btn btn-secondary"/>
+  @if(btnCadastro){
+  <input type="button" value="Cadastrar" class="btn btn-success" />
+  }@else if (!btnCadastro) {
+  <input type="button" value="Alterar" class="btn btn-warning" />
+  <input type="button" value="Remover" class="btn btn-danger" />
+  <input type="button" value="Cancelar" class="btn btn-secondary" />
+  }
 </form>
 
 <table class="table">
@@ -22,10 +25,5 @@
     </tr>
   </thead>
 
-  <tbody>
-  
-  </tbody>
-
-
+  <tbody></tbody>
 </table>
-

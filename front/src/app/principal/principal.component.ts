@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class PrincipalComponent {
 
+  // Variável para visibilidade dos botões
+  btnCadastro:boolean = true;
+
+
+
 }
