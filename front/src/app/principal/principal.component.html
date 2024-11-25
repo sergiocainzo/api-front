@@ -14,6 +14,8 @@
   }
 </form>
 
+<h1>{{ cliente | json}}</h1>
+
 <table class="table">
   <thead>
     <tr>
@@ -27,10 +29,10 @@
 
   <tbody>
     <tr *ngFor="let c of clientes; index as i">
-      <td>{{i+1}}</td>
-      <td>{{c.nome}}</td>
-      <td>{{c.idade}}</td>
-      <td>{{c.cidade}}</td>
+      <td>{{ i + 1 }}</td>
+      <td>{{ c.nome }}</td>
+      <td>{{ c.idade }}</td>
+      <td>{{ c.cidade }}</td>
       <td><button class="btn btn-primary">Selecionar</button></td>
     </tr>
   </tbody>

@@ -12,6 +12,9 @@ import { ClienteService } from '../servico/cliente.service';
 })
 export class PrincipalComponent {
 
+  // Objeto do tipo Cliente
+  cliente = new Cliente();
+
   // Construtor
   constructor(private servico: ClienteService) { }
 
