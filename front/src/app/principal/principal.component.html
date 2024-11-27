@@ -37,7 +37,7 @@
   }
 </form>
 
-<table class="table">
+<table class="table" *ngIf="tabela">
   <thead>
     <tr>
       <th>#</th>
@@ -54,7 +54,7 @@
       <td>{{ c.nome }}</td>
       <td>{{ c.idade }}</td>
       <td>{{ c.cidade }}</td>
-      <td><button class="btn btn-primary">Selecionar</button></td>
+      <td><button class="btn btn-primary" (click)="selecionarCliente(i)">Selecionar</button></td>
     </tr>
   </tbody>
 </table>

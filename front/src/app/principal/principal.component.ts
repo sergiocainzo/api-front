@@ -21,6 +21,9 @@ export class PrincipalComponent {
   // Variável para visibilidade dos botões
   btnCadastro: boolean = true;
 
+  // Variável para visibilidade da tabela
+  tabela: boolean = true;
+
   // JSON de clientes
   clientes: Cliente[] = [];
 
@@ -44,6 +47,20 @@ export class PrincipalComponent {
 
 
     });
+  }
+
+  // Metodo para selecionar um cliente específico
+  selecionarCliente(posicao: number): void {
+
+    // Selecionar Cliente no Vetor
+    this.cliente = this.clientes[posicao];
+
+    //Visibilidade dos botões
+    this.btnCadastro = false;
+
+    // Visibilidade da Tabela
+    this.tabela = false;
+
   }
 
 
