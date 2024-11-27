@@ -93,7 +93,32 @@ export class PrincipalComponent {
 
 
   // Metodo para excluir cliente
+  remover(): void {
+    this.servico.remover(this.cliente.codigo).subscribe(retorno => {
 
+      // Posição do Vetor
+      let posicao = this.clientes.findIndex(obj => {
+        return obj.codigo === this.cliente.codigo;
+      });
+
+
+      // remover o cliente no vetor
+      this.clientes.splice(posicao, 1);
+
+      // Limpar Formulário
+      this.cliente = new Cliente();
+
+      // Visibilidade dos botões
+      this.btnCadastro = true;
+
+      // Visibilidade da tablea
+      this.tabela = true;
+
+      // Mensagem
+      alert("Cliente removido com sucesso!!");
+
+    });
+  }
 
   // Método de Inicialização
   ngOnInit() {
