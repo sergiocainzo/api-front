@@ -120,6 +120,23 @@ export class PrincipalComponent {
     });
   }
 
+  // Metodo para cancelar
+  cancelar(): void {
+
+    // Limpar formulário
+    this.cliente = new Cliente();
+
+    // Visibilidade de botão
+    this.btnCadastro = true;
+
+    //Visibilidade de tabela
+    this.tabela = true;
+
+  }
+
+
+
+
   // Método de Inicialização
   ngOnInit() {
     this.selecionar();

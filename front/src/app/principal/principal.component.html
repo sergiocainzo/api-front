@@ -31,9 +31,24 @@
     (click)="cadastrar()"
   />
   }@else if (!btnCadastro) {
-  <input type="button" value="Alterar" class="btn btn-warning" (click)="editar()"/>
-  <input type="button" value="Remover" class="btn btn-danger" (click)="remover()"/>
-  <input type="button" value="Cancelar" class="btn btn-secondary" />
+  <input
+    type="button"
+    value="Alterar"
+    class="btn btn-warning"
+    (click)="editar()"
+  />
+  <input
+    type="button"
+    value="Remover"
+    class="btn btn-danger"
+    (click)="remover()"
+  />
+  <input
+    type="button"
+    value="Cancelar"
+    class="btn btn-secondary"
+    (click)="cancelar()"
+  />
   }
 </form>
 
@@ -54,7 +69,11 @@
       <td>{{ c.nome }}</td>
       <td>{{ c.idade }}</td>
       <td>{{ c.cidade }}</td>
-      <td><button class="btn btn-primary" (click)="selecionarCliente(i)">Selecionar</button></td>
+      <td>
+        <button class="btn btn-primary" (click)="selecionarCliente(i)">
+          Selecionar
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
