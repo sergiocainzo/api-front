@@ -92,6 +92,9 @@ export class PrincipalComponent {
   }
 
 
+  // Metodo para excluir cliente
+
+
   // Método de Inicialização
   ngOnInit() {
     this.selecionar();

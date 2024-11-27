@@ -9,26 +9,29 @@ import { Cliente } from '../modelo/Cliente';
 export class ClienteService {
 
   // URL da API
-  private url:string = 'http://localhost:8080';
+  private url: string = 'http://localhost:8080';
 
   // Construtor
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   // Método para selecionar todos os clientes
-  selecionar():Observable<Cliente[]>{
+  selecionar(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>(this.url);
   }
 
   // Metodo de Cadastro
-  cadastrar(obj:Cliente):Observable<Cliente>{
-    return this.http.post<Cliente>(this.url,obj);
+  cadastrar(obj: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(this.url, obj);
   }
 
   // Metodo de editar de Cadastro
-  editar(obj:Cliente):Observable<Cliente>{
-    return this.http.put<Cliente>(this.url,obj);
+  editar(obj: Cliente): Observable<Cliente> {
+    return this.http.put<Cliente>(this.url, obj);
   }
 
-
+  // Metodo para remover clientes
+  remover(codigo: number): Observable<void> {
+    return this.http.delete<void>(this.url + '/' + codigo)
+  }
 
 }
