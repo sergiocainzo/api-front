@@ -31,7 +31,19 @@ export class PrincipalComponent {
 
   // Metodo de Cadastro
   cadastrar(): void {
-    this.servico.cadastrar(this.cliente).subscribe(retorno => { this.clientes.push(retorno); });
+    this.servico.cadastrar(this.cliente).subscribe(retorno => {
+
+      // Cadastrar o cliente no vetor
+      this.clientes.push(retorno);
+
+      // Limpar Formulário
+      this.cliente = new Cliente();
+
+      // Mensagem
+      alert("Cliente cadastrado com sucesso!!");
+
+
+    });
   }
 
 
