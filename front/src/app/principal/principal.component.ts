@@ -63,6 +63,34 @@ export class PrincipalComponent {
 
   }
 
+  // Metodo para editar cadastro
+  editar(): void {
+    this.servico.editar(this.cliente).subscribe(retorno => {
+
+      // Posição do Vetor
+      let posicao = this.clientes.findIndex(obj => {
+        return obj.codigo === retorno.codigo;
+      });
+
+
+      // Alterar o cliente no vetor
+      this.clientes[posicao] = retorno;
+
+      // Limpar Formulário
+      this.cliente = new Cliente();
+
+      // Visibilidade dos botões
+      this.btnCadastro = true;
+
+      // Visibilidade da tablea
+      this.tabela = true;
+
+      // Mensagem
+      alert("Cliente alterado com sucesso!!");
+
+    });
+  }
+
 
   // Método de Inicialização
   ngOnInit() {

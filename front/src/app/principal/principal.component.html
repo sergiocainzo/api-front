@@ -31,7 +31,7 @@
     (click)="cadastrar()"
   />
   }@else if (!btnCadastro) {
-  <input type="button" value="Alterar" class="btn btn-warning" />
+  <input type="button" value="Alterar" class="btn btn-warning" (click)="editar()"/>
   <input type="button" value="Remover" class="btn btn-danger" />
   <input type="button" value="Cancelar" class="btn btn-secondary" />
   }
